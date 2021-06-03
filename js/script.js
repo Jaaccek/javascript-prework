@@ -1,10 +1,11 @@
-function playGame(playerInput){
+{
+const playGame = function (playerInput){
     
     clearMessages();
     
     console.log(playerInput);
 
-    function getMoveName(argMoveId){
+    const getMoveName = function (argMoveId){
     
         if( argMoveId == 1){
             return 'kamień';
@@ -26,7 +27,7 @@ function playGame(playerInput){
     
     let playerMove = getMoveName(playerInput);
     
-    function displayResult(argComputerMove, argPlayerMove){
+    const displayResult = function(argComputerMove, argPlayerMove){
         printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
         
         if(argPlayerMove == 'Nieznany ruch'){
@@ -140,3 +141,4 @@ document.getElementById('play-paper').addEventListener('click', function(){
     playGame(2);
 
 });
+}
